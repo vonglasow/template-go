@@ -17,3 +17,14 @@ builds:
       - -X main.version={{.Version}}
       - -X main.commitSHA={{.FullCommit}}
       - -X main.buildDate={{.Date}}
+brews:
+  - name: "go-template"
+    homepage: "https://github.com/vonglasow/go-template"
+    description: "Template"
+    license: "GPL3"
+    url_template: "https://github.com/vonglasow/go-template/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
+    repository:
+      owner: vonglasow
+      name: homebrew-go-template
+      branch: main
