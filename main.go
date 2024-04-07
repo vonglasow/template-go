@@ -25,9 +25,9 @@ type T struct {
 }
 
 var (
-	version string = "dev"
-	commit  string = "none"
-	date    string = "unknown"
+	version   string = "dev"
+	commitSHA string = "none"
+	buildDate string = "unknown"
 )
 
 func main() {
@@ -37,7 +37,7 @@ func main() {
 	flag.Parse()
 
 	if *showVersion {
-		fmt.Printf("Gaia %s, commit %s, built at %s", version, commit, date)
+		fmt.Printf("Gaia %s, commit %s, built at %s", version, commitSHA, buildDate)
 		os.Exit(0)
 	}
 
