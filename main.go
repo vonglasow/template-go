@@ -1,8 +1,10 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"log"
+	"os"
 
 	"gopkg.in/yaml.v3"
 )
@@ -22,7 +24,23 @@ type T struct {
 	}
 }
 
+var (
+	version string = "dev"
+	commit  string = "none"
+	date    string = "unknown"
+)
+
 func main() {
+	// Define a flag for --version
+	showVersion := flag.Bool("version", false, "Prints the version information")
+
+	flag.Parse()
+
+	if *showVersion {
+		fmt.Printf("Gaia %s, commit %s, built at %s", version, commit, date)
+		os.Exit(0)
+	}
+
 	fmt.Println("This is a template")
 	t := T{}
 
@@ -30,5 +48,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("error: %v", err)
 	}
+
 	fmt.Printf("--- t:\n%v\n\n", t)
 }
