@@ -41,7 +41,7 @@ func main() {
 		os.Exit(0)
 	}
 
-	fmt.Println("This is a template")
+	fmt.Println("This is a template version")
 	t := T{}
 
 	err := yaml.Unmarshal([]byte(data), &t)
