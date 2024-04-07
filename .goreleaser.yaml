@@ -24,6 +24,7 @@ brews:
     license: "GPL3"
     url_template: "https://github.com/vonglasow/template-go/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
     commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
+    folder: Formula
     repository:
       owner: vonglasow
       name: homebrew-go-template
