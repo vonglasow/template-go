@@ -19,7 +19,7 @@ builds:
       - -X main.buildDate={{.Date}}
 brews:
   - name: "go-template"
-    homepage: "https://github.com/vonglasow/go-template"
+    homepage: "https://github.com/vonglasow/template-go"
     description: "Template"
     license: "GPL3"
     url_template: "https://github.com/vonglasow/go-template/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
