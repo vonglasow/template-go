@@ -1,5 +1,5 @@
 # .goreleaser.yaml
-project_name: gaia
+project_name: template-go
 builds:
   - env:
       - CGO_ENABLED=0
