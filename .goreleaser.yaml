@@ -18,7 +18,7 @@ builds:
       - -X main.commitSHA={{.FullCommit}}
       - -X main.buildDate={{.Date}}
 brews:
-  - name: "go-template"
+  - name: "template-go"
     homepage: "https://github.com/vonglasow/template-go"
     description: "Template"
     license: "GPL3"
